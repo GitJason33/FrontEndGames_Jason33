@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Simple Calculator</title>
+   <style>
+      #container{
+         font-size: 50px;
+      }
+      input{
+         font-size: 20px;
+      }
+      button{
+         font-size: 40px;
+         height: 50px;
+         width: 50px;
+      }
+      button#theme{
+         font-size: 25px;
+         width: auto;
+         height: auto;
+      }
+   </style>
+</head>
+<body>
+   <input type="text" placeholder="Arithmetic Calculator" id="calcField" value="" readonly size="40"><br>
+   <input type="text" placeholder="Result" id="result" readonly size="40">
+   <div id="container">
+      <button class="digits" onclick="add(this.value)" value="1">1</button>
+      <button class="digits" onclick="add(this.value)" value="2">2</button>
+      <button class="digits" onclick="add(this.value)" value="3">3</button>
+
+      <button class="operator" onclick="add(this.value)" value="+" disabled>+</button>
+      <button class="operator" onclick="add(this.value)" value="-" disabled>-</button>
+      <button id="clear" onclick="window.location.reload();">D</button><br>
+
+      <button class="digits" onclick="add(this.value)" value="4">4</button>
+      <button class="digits" onclick="add(this.value)" value="5">5</button>
+      <button class="digits" onclick="add(this.value)" value="6">6</button>
+
+      <button class="operator" onclick="add(this.value)" value="x" disabled>x</button>
+      <button class="operator" onclick="add(this.value)" value="÷" disabled>÷</button><br>
+
+      <button class="digits" onclick="add(this.value)" value="7">7</button>
+      <button class="digits" onclick="add(this.value)" value="8">8</button>
+      <button class="digits" onclick="add(this.value)" value="9">9</button>
+      <button class="digits" onclick="add(this.value)" value="0">0</button>
+      <button id="equal" onclick="add(this.value); ShowResult();" value="=" disabled>=</button>
+      
+   </div>
+   <button id="theme" onclick="Theme(1);"><strong>Dark Mode</strong></button>
+   <p id="parag"></p>
+   <script src="./JS-solve.js"></script>
+</body>
+</html>
